@@ -1,66 +1,90 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHome, faInfoCircle, faUser, faAddressCard } from '@fortawesome/free-solid-svg-icons';
-import { Sidebar, Menu, MenuItem, SubMenu } from 'react-pro-sidebar';
-import './components.css';
+import {
+  faHome,
+  faUser,
+  faAddressCard,
+  faInfoCircle
+} from '@fortawesome/free-solid-svg-icons';
+import './Sidebar.css';
 
-const SidebarComponent = () => {
-  const linkStyle = {
-    textDecoration: 'none',
-    color: 'inherit',
-    display: 'flex',
-    alignItems: 'center',
-    padding: '0.5rem 1rem',
-  };
+const Sidebar = () => {
+  const location = useLocation();
 
   return (
-    <Sidebar className="sidebar">
-      <Menu iconShape="square">
-        <MenuItem className="menu-item">
+    <div className="sidebar bg-light">
+      <ul className="sidebar-items">
+        {/* Logo */}
+        <li className="menu-item-logo">
           <Link className="logo" to="/">
             <img src="/images/logos/logo-navbar.png" alt="Logo Empresa" />
           </Link>
-        </MenuItem>
-        <MenuItem className="menu-item">
-          <Link to="/" style={linkStyle}>
-            <FontAwesomeIcon icon={faHome} className="menu-icon" />
-            <span className="menu-text">Home</span>
+        </li>
+
+        <li className={location.pathname === '/' ? 'active' : ''}>
+          <Link to="/" className="link">
+            <div className="item centered">
+              <span className="icon">
+                <FontAwesomeIcon icon={faHome} />
+              </span>
+              <span className="text">Home</span>
+            </div>
           </Link>
-        </MenuItem>
-        <MenuItem className="menu-item">
-          <Link to="/usuarios/registro" style={linkStyle}>
-            <FontAwesomeIcon icon={faUser} className="menu-icon" />
-            <span className="menu-text">Registro Usuarios</span>
+        </li>
+        <li className={location.pathname === '/usuarios/registro' ? 'active' : ''}>
+          <Link to="/usuarios/registro" className="link">
+            <div className="item centered">
+              <span className="icon">
+                <FontAwesomeIcon icon={faUser} />
+              </span>
+              <span className="text">Registro Usuarios</span>
+            </div>
           </Link>
-        </MenuItem>
-        <MenuItem className="menu-item">
-          <Link to="/pacientes/registro" style={linkStyle}>
-            <FontAwesomeIcon icon={faAddressCard} className="menu-icon" />
-            <span className="menu-text">Registro Paciente</span>
+        </li>
+        <li className={location.pathname === '/pacientes/registro' ? 'active' : ''}>
+          <Link to="/pacientes/registro" className="link">
+            <div className="item centered">
+              <span className="icon">
+                <FontAwesomeIcon icon={faAddressCard} />
+              </span>
+              <span className="text">Registro Paciente</span>
+            </div>
           </Link>
-        </MenuItem>
-        <MenuItem className="menu-item">
-          <Link to="/usuarios" style={linkStyle}>
-            <FontAwesomeIcon icon={faUser} className="menu-icon" />
-            <span className="menu-text">Usuarios</span>
+        </li>
+        <li className={location.pathname === '/usuarios' ? 'active' : ''}>
+          <Link to="/usuarios" className="link">
+            <div className="item centered">
+              <span className="icon">
+                <FontAwesomeIcon icon={faUser} />
+              </span>
+              <span className="text">Usuarios</span>
+            </div>
           </Link>
-        </MenuItem>
-        <MenuItem className="menu-item">
-          <Link to="/pacientes" style={linkStyle}>
-            <FontAwesomeIcon icon={faAddressCard} className="menu-icon" />
-            <span className="menu-text">Pacientes</span>
+        </li>
+        <li className={location.pathname === '/pacientes' ? 'active' : ''}>
+          <Link to="/pacientes" className="link">
+            <div className="item centered">
+              <span className="icon">
+                <FontAwesomeIcon icon={faAddressCard} />
+              </span>
+              <span className="text">Pacientes</span>
+            </div>
           </Link>
-        </MenuItem>
-        <MenuItem className="menu-item">
-          <Link to="/about" style={linkStyle}>
-            <FontAwesomeIcon icon={faInfoCircle} className="menu-icon" />
-            <span className="menu-text">About</span>
+        </li>
+        <li className={location.pathname === '/about' ? 'active' : ''}>
+          <Link to="/about" className="link">
+            <div className="item centered">
+              <span className="icon">
+                <FontAwesomeIcon icon={faInfoCircle} />
+              </span>
+              <span className="text">About</span>
+            </div>
           </Link>
-        </MenuItem>
-      </Menu>
-    </Sidebar>
+        </li>
+      </ul>
+    </div>
   );
 };
 
-export default SidebarComponent;
+export default Sidebar;

@@ -1,15 +1,33 @@
 .sidebar {
-  background-color: #ffffff; 
+  background-color: #ffffff;
   color: rgba(42, 53, 71, 1);
-  font-size: 14px; 
+  font-size: 14px;
   height: 100%;
 }
 
 .logo {
   display: flex;
   justify-content: center;
+  align-items: center;
   width: auto;
   height: 35px;
+  
+}
+
+.logo img {
+  max-height: 100%;
+}
+
+.menu-item-logo {
+  margin-bottom: 20px;
+}
+
+.menu-link {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
 }
 
 .menu-text {
@@ -31,9 +49,4 @@
 .menu-item:hover .menu-icon {
   color: #5D87FF;
 }
-
-.pro-sidebar-inner {
-  border-right: none;
-}
-
 
