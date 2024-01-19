@@ -11,7 +11,7 @@
   justify-content: center;
   align-items: center;
   width: auto;
-  height: 60px;
+  height: 55px;
 }
 
 .logo img {
@@ -19,7 +19,8 @@
 }
 
 .menu-item-logo {
-  margin-bottom: 20px;
+  margin-bottom: 25px;
+  margin-top: 5px;
 }
 
 .sidebar-items {
@@ -32,7 +33,7 @@
 .sidebar-items a {
   display: flex;
   padding: 10px;
-  color: rgba(42, 53, 71, 1);
+  color: rgb(52, 67, 88);
   text-decoration: none;
   transition: background-color 0.3s ease;
 }
@@ -48,20 +49,29 @@
 
 .sidebar-items .item {
   display: flex;
-  gap: 10px;
+  align-items: center;
   padding: 8px 12px;
   transition: background-color 0.3s ease;
 }
 
 .sidebar-items .icon {
   font-size: 1.2em;
+  margin-right: 10px;
 }
 
 .sidebar-items .text {
-  font-size: 0.9em;
+  font-size: 14px;
+  white-space: nowrap;
+  font-weight: normal;
 }
 
 .centered {
   width: 100%;
   border-radius: 10px;
+}
+
+.home-title,
+.auth-title {
+  font-size: 14px;
+  padding: 8px 12px;
 }

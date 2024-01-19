@@ -1,0 +1,55 @@
+/* Navbar.css */
+
+.dropdown-container {
+  margin-left: auto;
+}
+
+.custom-toggle::after {
+  display: none !important;
+}
+
+.custom-toggle {
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+.user-image {
+  margin-left: 10px;
+  max-width: 30px;
+  max-height: 30px;
+}
+
+.dropdown-menu-right {
+  right: 0;
+  left: auto;
+}
+
+.dropdown-toggle:hover,
+.dropdown-toggle:focus {
+  background-color: #ffffff !important;
+  border-color: #ececec !important;
+}
+
+.dropdown-menu-right .dropdown-item:hover {
+    background-color: #f5f5f5 !important;
+}
+
+.custom-button {
+    display: block;
+    margin: auto;
+    width: 85%;
+    padding: 0.3rem 1rem;
+    text-align: center;
+    white-space: nowrap;
+    background-color: #ffffff;
+    color: #5d87ff;
+    border: 1px solid #5d87ff;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .custom-button:hover {
+    background-color: #5d87ff;
+    color: #ffffff;
+  }
