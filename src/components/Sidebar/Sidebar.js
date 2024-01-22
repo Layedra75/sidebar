@@ -32,25 +32,25 @@ const Sidebar = () => {
       items: [
         {
           name: 'Usuarios',
-          route: 'usuarios',
+          route: '/usuarios',
           icon: <FontAwesomeIcon icon={faUser} />,
           hideMenu: 'Usuarios',
         },
         {
           name: 'Pacientes',
-          route: 'pacientes',
+          route: '/pacientes',
           icon: <FontAwesomeIcon icon={faAddressCard} />,
           hideMenu: 'Pacientes',
         },
         {
           name: 'Registro Usuarios',
-          route: 'register',
+          route: '/register',
           icon: <FontAwesomeIcon icon={faUser} />,
           hideMenu: 'Registro Usuarios',
         },
         {
           name: 'Registro Paciente',
-          route: 'registerPatient',
+          route: '/registerPatient',
           icon: <FontAwesomeIcon icon={faAddressCard} />,
           hideMenu: 'Registro Paciente',
         },
@@ -59,7 +59,7 @@ const Sidebar = () => {
   ];
 
   return (
-    <div className="sidebar bg-light">
+    <div className="sidebar bg-white">
       <ul className="sidebar-items">
         {/* Logo */}
         <li className="menu-item-logo">

@@ -9,7 +9,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="navbar navbar-expand-lg bg-light sticky-top">
+    <nav className="navbar navbar-expand-lg bg-white sticky-top">
       <div className="container-fluid">
         <div className="dropdown-container ms-auto">
           <Dropdown>
