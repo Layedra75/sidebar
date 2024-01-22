@@ -70,8 +70,8 @@
   border-radius: 10px;
 }
 
-.home-title,
-.auth-title {
-  font-size: 14px;
+.inicio-title,
+.registros-title {
+  font-size: 15px;
   padding: 8px 12px;
 }

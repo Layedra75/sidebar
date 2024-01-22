@@ -3,7 +3,7 @@ import React from 'react';
 import './Sidebar.css';
 import { Link, useLocation } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faUser, faAddressCard, faHospital, faCalendarCheck } from '@fortawesome/free-regular-svg-icons';
+import { faUser, faAddressCard, faHospital, faCalendarCheck, faAddressBook } from '@fortawesome/free-regular-svg-icons';
 
 
 const Sidebar = () => {
@@ -11,7 +11,7 @@ const Sidebar = () => {
 
   const sidebarMenu = [
     {
-      title: 'Home',
+      title: 'Inicio',
       items: [
         {
           name: 'Dashboard',
@@ -25,10 +25,16 @@ const Sidebar = () => {
           icon: <FontAwesomeIcon icon={faCalendarCheck} />,
           hideMenu: 'Citas Médicas',
         },
+        {
+          name: 'Historial clínico',
+          route: '/historias',
+          icon: <FontAwesomeIcon icon={faAddressBook} />,
+          hideMenu: 'Historial clínico',
+        },
       ],
     },
     {
-      title: 'AUTH',
+      title: 'Registros',
       items: [
         {
           name: 'Usuarios',
@@ -41,18 +47,6 @@ const Sidebar = () => {
           route: '/pacientes',
           icon: <FontAwesomeIcon icon={faAddressCard} />,
           hideMenu: 'Pacientes',
-        },
-        {
-          name: 'Registro Usuarios',
-          route: '/register',
-          icon: <FontAwesomeIcon icon={faUser} />,
-          hideMenu: 'Registro Usuarios',
-        },
-        {
-          name: 'Registro Paciente',
-          route: '/registerPatient',
-          icon: <FontAwesomeIcon icon={faAddressCard} />,
-          hideMenu: 'Registro Paciente',
         },
       ],
     },

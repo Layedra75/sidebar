@@ -1,0 +1,48 @@
+/* Estilos para las cabeceras de la tabla */
+.table thead th {
+    font-weight: normal;
+    color: rgb(52, 67, 88, 0.8);
+}
+
+/* Estilos para las celdas del cuerpo de la tabla */
+.table tbody td {
+    font-weight: normal;
+    color: rgb(52, 67, 88, 0.8);
+}
+
+/* Estilos para el encabezado de la card */
+.card-header h1 {
+    margin-top: 10px;
+    color: rgb(52, 67, 88);
+    font-size: 18px;
+}
+
+/* Estilos para los elementos dentro de la tabla */
+.dataTables_wrapper .dataTables_filter label,
+.dataTables_wrapper .dataTables_length label,
+.dataTables_wrapper .dataTables_info,
+.dataTables_wrapper .dataTables_length select {
+    color: rgb(52, 67, 88, 0.8);
+}
+
+/* Estilo para el botón flotante */
+.floating-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #5d87ff;
+    color: #fff;
+    font-size: 24px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+.floating-button:hover {
+    background-color: #0057b3ab;
+}
+
+  
