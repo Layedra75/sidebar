@@ -3,7 +3,7 @@ import $ from 'jquery';
 import 'datatables.net-bs5';
 import 'datatables.net-responsive-bs5';
 import 'datatables.net-bs5/css/dataTables.bootstrap5.min.css';
-import Modal from '../../components/Modal/ModalPacientes';
+import Modal from '../../components/Modal/ModalUsuarios';
 import './Usuarios.css';
 
 const TablaUsuarios = () => {
@@ -45,7 +45,7 @@ const TablaUsuarios = () => {
   return (
     <div className="card shadow border-0"> 
       <div className="card-header border-0">
-        <h1 className="bg-light">Lista de Pacientes</h1>
+        <h1 className="bg-light">Lista de Usuarios</h1>
       </div>
       <div className="card-body">
         <div className="table-responsive">
