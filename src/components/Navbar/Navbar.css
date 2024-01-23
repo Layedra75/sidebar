@@ -11,6 +11,7 @@
 .custom-toggle {
   padding: 0.5rem 1rem;
   cursor: pointer;
+  background-color: #ececec !important;
 }
 
 .user-image {
@@ -31,25 +32,25 @@
 }
 
 .dropdown-menu-right .dropdown-item:hover {
-    background-color: #f5f5f5 !important;
+  background-color: #f5f5f5 !important;
 }
 
 .custom-button {
-    display: block;
-    margin: auto;
-    width: 85%;
-    padding: 0.3rem 1rem;
-    text-align: center;
-    white-space: nowrap;
-    background-color: #ffffff;
-    color: #5d87ff;
-    border: 1px solid #5d87ff;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-    cursor: pointer;
-  }
-  
-  .custom-button:hover {
-    background-color: #5d87ff;
-    color: #ffffff;
-  }
+  display: block;
+  margin: auto;
+  width: 85%;
+  padding: 0.3rem 1rem;
+  text-align: center;
+  white-space: nowrap;
+  background-color: #ffffff;
+  color: #5d87ff;
+  border: 1px solid #5d87ff;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+
+.custom-button:hover {
+  background-color: #5d87ff;
+  color: #ffffff;
+}

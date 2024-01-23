@@ -1,16 +1,18 @@
-import React, { useRef, useEffect, useState } from 'react';
-import $ from 'jquery';
-import 'datatables.net-bs5';
-import 'datatables.net-responsive-bs5';
-import 'datatables.net-bs5/css/dataTables.bootstrap5.min.css';
-import Modal from '../../components/Modal/ModalUsuarios';
-import './Usuarios.css';
+import React, { useRef, useEffect, useState } from "react";
+import $ from "jquery";
+import "datatables.net-bs5";
+import "datatables.net-responsive-bs5";
+import "datatables.net-bs5/css/dataTables.bootstrap5.min.css";
+import Modal from "../../components/Modal/ModalUsuarios";
+import "./Usuarios.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPlus } from "@fortawesome/free-solid-svg-icons";
 
 const TablaUsuarios = () => {
   const tableRef = useRef(null);
   const [isModalOpen, setModalOpen] = useState(false);
   const handleCrearPaciente = () => {
-    console.log('Botón clickeado');
+    console.log("Botón clickeado");
     setModalOpen(true);
   };
 
@@ -22,17 +24,33 @@ const TablaUsuarios = () => {
     const table = $(tableRef.current).DataTable({
       responsive: true,
       data: [
-        { rol: 'Admin', cedula: '1754200118', nombre: 'Roberto', apellido: 'Soto', correo: 'roberto@gmail.com', numero: '09987450', acciones: '' },
-        { rol: 'Admin', cedula: '1754500128', nombre: 'Joel', apellido: 'Layedra', correo: 'layedra@gmail.com', numero: '09987450', acciones: ''  },
+        {
+          rol: "Admin",
+          cedula: "1754200118",
+          nombre: "Roberto",
+          apellido: "Soto",
+          correo: "roberto@gmail.com",
+          numero: "09987450",
+          acciones: "",
+        },
+        {
+          rol: "Admin",
+          cedula: "1754500128",
+          nombre: "Joel",
+          apellido: "Layedra",
+          correo: "layedra@gmail.com",
+          numero: "09987450",
+          acciones: "",
+        },
       ],
       columns: [
-        { title: 'Rol', data: 'rol' },
-        { title: 'Cédula', data: 'cedula' },
-        { title: 'Nombre', data: 'nombre' },
-        { title: 'Apellido', data: 'apellido' },
-        { title: 'Correo', data: 'correo' },
-        { title: 'Número', data: 'numero' },
-        { title: 'Acciones', data: 'acciones' },
+        { title: "Rol", data: "rol" },
+        { title: "Cédula", data: "cedula" },
+        { title: "Nombre", data: "nombre" },
+        { title: "Apellido", data: "apellido" },
+        { title: "Correo", data: "correo" },
+        { title: "Número", data: "numero" },
+        { title: "Acciones", data: "acciones" },
       ],
     });
 
@@ -41,9 +59,8 @@ const TablaUsuarios = () => {
     };
   }, []);
 
-
   return (
-    <div className="card shadow border-0"> 
+    <div className="card shadow border-0">
       <div className="card-header border-0">
         <h1 className="bg-light">Lista de Usuarios</h1>
       </div>
@@ -66,8 +83,13 @@ const TablaUsuarios = () => {
         </div>
       </div>
       {/* Botón flotante */}
-      <button className="floating-button" onClick={handleCrearPaciente}>
-        +
+      <button
+        className="floating-button btn-float"
+        onClick={handleCrearPaciente}
+      >
+        <span className="fa-icon">
+          <FontAwesomeIcon icon={faPlus} />
+        </span>
       </button>
 
       <Modal isOpen={isModalOpen} onClose={handleCloseModal} />

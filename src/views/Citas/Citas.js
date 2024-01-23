@@ -1,5 +1,5 @@
 // Citas.js
-import React from 'react';
+import React from "react";
 
 const Citas = () => {
   return <div>Citas</div>;

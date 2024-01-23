@@ -1,7 +1,7 @@
 // Modal.js
 import React, { useState } from 'react';
 import './Modal.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import { FormControl } from 'react-bootstrap';
 
 const ModalPacientes = ({ onClose, isOpen }) => {
   const [formData, setFormData] = useState({
@@ -71,9 +71,13 @@ const ModalPacientes = ({ onClose, isOpen }) => {
                 </div>
               </div>
               <div className="col-md-6">
-                <div className="mb-3">
-                  <label htmlFor="genero" className="form-label">Género:</label>
-                  <input type="text" id="genero" name="genero" className="form-control" value={formData.genero} onChange={handleInputChange} />
+              <div className="mb-3">
+                <label htmlFor="genero" className="form-label">Genero:</label>
+                <FormControl as="select" id="genero" name="genero" value={formData.genero} onChange={handleInputChange}>
+                  <option value="administrador">Masculino</option>
+                  <option value="doctor">Femenino</option>
+                  <option value="doctor">Otro</option>
+                </FormControl>
                 </div>
               </div>
               <div className="col-md-6">

@@ -1,7 +1,8 @@
 // ModalUsuarios.js
 import React, { useState } from 'react';
 import './Modal.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import { FormControl } from 'react-bootstrap';
+
 
 const ModalUsuarios = ({ onClose, isOpen }) => {
   const [formData, setFormData] = useState({
@@ -11,7 +12,7 @@ const ModalUsuarios = ({ onClose, isOpen }) => {
     correo: '',
     telefono: '',
     fechaNacimiento: '', 
-    genero: '',
+    rol: '',
     direccion: '',
   });
 
@@ -48,6 +49,15 @@ const ModalUsuarios = ({ onClose, isOpen }) => {
               </div>
               <div className="col-md-6">
                 <div className="mb-3">
+                <label htmlFor="rol" className="form-label">Rol:</label>
+                <FormControl as="select" id="rol" name="rol" value={formData.rol} onChange={handleInputChange}>
+                  <option value="administrador">Administrador</option>
+                  <option value="doctor">Doctor</option>
+                </FormControl>
+                </div>
+              </div>
+              <div className="col-md-6">
+                <div className="mb-3">
                   <label htmlFor="cedula" className="form-label">Cédula:</label>
                   <input type="text" id="cedula" name="cedula" className="form-control" value={formData.cedula} onChange={handleInputChange} />
                 </div>
@@ -68,12 +78,6 @@ const ModalUsuarios = ({ onClose, isOpen }) => {
                 <div className="mb-3">
                   <label htmlFor="fechaNacimiento" className="form-label">Fecha de Nacimiento:</label>
                   <input type="date" id="fechaNacimiento" name="fechaNacimiento" className="form-control" value={formData.fechaNacimiento} onChange={handleInputChange} />
-                </div>
-              </div>
-              <div className="col-md-6">
-                <div className="mb-3">
-                  <label htmlFor="genero" className="form-label">Rol:</label>
-                  <input type="text" id="genero" name="genero" className="form-control" value={formData.genero} onChange={handleInputChange} />
                 </div>
               </div>
               <div className="col-md-6">
