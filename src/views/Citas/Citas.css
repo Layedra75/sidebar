@@ -1,0 +1,15 @@
+/* Calendar.css */
+
+/* Estilos para la card del calendario */
+.calendar-card {
+  margin: 10px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para el encabezado de la tarjeta */
+.calendar-card .card-header h1 {
+  margin-top: 10px;
+  color: rgb(52, 67, 88);
+  font-size: 18px;
+}
