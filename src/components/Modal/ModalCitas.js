@@ -11,7 +11,7 @@ const ModalCitas = ({
 }) => {
   const [title] = useState("Cita Médica");
   const [start, setStart] = useState(
-    selectedDate?.toISOString().slice(0, 10) || ""
+    selectedDate ? selectedDate.toISOString().slice(0, 10) : ""
   );
   const [hour, setHour] = useState(
     selectedHour !== "" ? selectedHour.toString().padStart(2, "0") + ":00" : ""
@@ -21,12 +21,13 @@ const ModalCitas = ({
   const [description, setDescription] = useState("");
 
   useEffect(() => {
+    setStart(selectedDate ? selectedDate.toISOString().slice(0, 10) : "");
     setHour(selectedHour !== "" ? selectedHour.toString().padStart(2, "0") + ":00" : "");
-  }, [selectedHour]);
+  }, [selectedDate, selectedHour]);
 
   const handleSave = () => {
-    const fullStart = `${start}T${hour}`;
-    onSave(title, description, fullStart, null, patient, doctor);
+    const fullStartDate = `${start}T${hour}`;
+    onSave(title, description, new Date(fullStartDate), null, patient, doctor); // Convertir a objeto Date
   };
 
   return (

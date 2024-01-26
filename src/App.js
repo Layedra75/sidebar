@@ -5,6 +5,7 @@ import Sidebar from './components/Sidebar/Sidebar';
 import Navbar from './components/Navbar/Navbar';
 import AppRoutes from './router/Routes';
 
+
 const App = () => {
   return (
     <Router>

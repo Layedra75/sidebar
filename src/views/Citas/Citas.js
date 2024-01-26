@@ -15,16 +15,19 @@ const Calendar = () => {
 
   const handleDateClick = (arg) => {
     const selectedDate = new Date(arg.date);
-    console.log("selectedDate:", selectedDate);
+    const formattedDate = selectedDate.toISOString().slice(0, 10);
     const selectedHour = selectedDate.getHours();
     const selectedMinute = selectedDate.getMinutes();
     const formattedHour = selectedHour.toString().padStart(2, "0");
     const formattedMinute = selectedMinute.toString().padStart(2, "0");
     const formattedTime = `${formattedHour}:${formattedMinute}`;
-    setSelectedDate(selectedDate);
+    const fullStartDate = `${formattedDate}T${formattedTime}`;
+  
+    setSelectedDate(new Date(fullStartDate));
     setSelectedHour(formattedTime);
     setModalShow(true);
   };
+  
   
   const handleSave = (title, description, start, end, patient, doctor) => {
     setModalShow(false);
